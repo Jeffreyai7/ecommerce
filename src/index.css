@@ -1,0 +1,83 @@
+:root{
+    --PrimaryOrange: #ff7d1a;
+    --Secondary-Paleorange: hsl(25, 100%, 94%);
+    --Verydarkblue: hsl(220, 13%, 13%);
+    --Dargrayishblue: hsl(219, 9%, 45%);
+    --Grayishblue: hsl(220, 14%, 75%);
+    --Lightgrayishblue: hsl(223, 64%, 98%);
+    --PrimaryWhite: hsl(0, 0%, 100%);
+    --Black :hsl(0, 0%, 0%);
+    --OpaqueBlack: hsl(0, 0%, 75%);
+
+    --ff-primary: "Kumbh Sans", sans-serif;
+
+    --fw-light: 400;
+    --fw-bold: 700;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold)
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol{
+  list-style: none;
+}
+
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+#root, #__next {
+    isolation: isolate;
+  }
+
+/* Base styles */
+
+
+
+/* Media Query */
+
+
+
