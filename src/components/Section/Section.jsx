@@ -2,7 +2,7 @@ import "./section.css"
 import { useEffect } from "react"
 
 
-function Section({productNumber, increasefn, decreasefn, addTocart, preImage, nextImage, initial, overlay__preImage, overlay__nextImage, overlay__initial, displayMenu, isMenuOpened, changeImage}){
+function Section({productNumber, increasefn, decreasefn, addTocart, preImage, nextImage, initial, overlay__preImage, overlay__nextImage, overlay__initial, displayMenu, isOverlayOpened, displayOverlay, changeImage}){
 // useEffect(()=> {
 // const overlay = document.querySelector(".overlay")
 
@@ -19,16 +19,16 @@ return <section>
                     <div className="nextbtn" onClick={nextImage}><img src="images/icon-next.svg" alt="next" /></div>
                 </div>
              <div className="hidden preview">
-               <div><img src="images/image-product-1-thumbnail.jpg" alt="product1"  onClick={() => {displayMenu(), changeImage(1)}}/></div>
-               <div><img src="images/image-product-2-thumbnail.jpg" alt="product2" onClick={() => {displayMenu(), changeImage(2)}}/></div>
-               <div><img src="images/image-product-3-thumbnail.jpg" alt="product3" onClick={() => {displayMenu(), changeImage(3)}}/></div>
-               <div><img src="images/image-product-4-thumbnail.jpg" alt="product4" onClick={() => {displayMenu(), changeImage(4)}}/></div> 
+               <div><img src="images/image-product-1-thumbnail.jpg" alt="product1"  onClick={() => {displayOverlay(), changeImage(1)}}/></div>
+               <div><img src="images/image-product-2-thumbnail.jpg" alt="product2" onClick={() => {displayOverlay(), changeImage(2)}}/></div>
+               <div><img src="images/image-product-3-thumbnail.jpg" alt="product3" onClick={() => {displayOverlay(), changeImage(3)}}/></div>
+               <div><img src="images/image-product-4-thumbnail.jpg" alt="product4" onClick={() => {displayOverlay(), changeImage(4)}}/></div> 
              </div>   
                 </div>
-                    <div className={ isMenuOpened ? "overlay" : "hidden"}>
+                    <div className={ isOverlayOpened ? "overlay" : "hidden"}>
                     <div className="overlay__content">
                     <div className="posterimage">
-                        <div className="overlay__closebtnwrapper"><svg onClick={displayMenu} width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ffffff" fill-rule="evenodd"/></svg></div>
+                        <div className="overlay__closebtnwrapper"><svg onClick={displayOverlay} width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ffffff" fill-rule="evenodd"/></svg></div>
                         <div className="overlay__previousbtn" onClick={overlay__preImage}>
                         <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
                         </div>

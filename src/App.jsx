@@ -9,6 +9,7 @@ const [initial, setInitial] = useState(1)
 const [overlay__initial, setOverlay__Initial] = useState(1)
 const [isMenuOpened, setIsmenuOpened] = useState(false)
 const [isCartOpened, setIsCartOpened] = useState(false)
+const [isOverlayOpened, setOverlayOpened] = useState(false)
 
 
 function displayCart(){
@@ -17,6 +18,10 @@ function displayCart(){
 
 function displayMenu(){
      setIsmenuOpened(!isMenuOpened)
+}
+
+function displayOverlay(){
+    setOverlayOpened(!isOverlayOpened)
 }
 
 
@@ -86,7 +91,7 @@ const changeImage = (num) => {
  return(
     <div>
         <Navbar cartNumber={cartnum} deletecart={deletecart} isMenuOpened={isMenuOpened} isCartOpened={isCartOpened}  displayCart={displayCart} displayMenu={displayMenu} />
-        <Section productNumber={count} increasefn={handleIncrease} decreasefn={handleDecrease} addTocart={addTocart} preImage={preImage} nextImage={nextImage} initial={initial} overlay__initial={overlay__initial} overlay__preImage={overlay__preImage} overlay__nextImage={overlay__nextImage} displayMenu={displayMenu} isMenuOpened={isMenuOpened}  changeImage={changeImage}/>
+        <Section productNumber={count} increasefn={handleIncrease} decreasefn={handleDecrease} addTocart={addTocart} preImage={preImage} nextImage={nextImage} initial={initial} overlay__initial={overlay__initial} overlay__preImage={overlay__preImage} overlay__nextImage={overlay__nextImage} displayMenu={displayMenu} isMenuOpened={isMenuOpened}  changeImage={changeImage} isOverlayOpened={isOverlayOpened} displayOverlay={displayOverlay}/>
     </div>
  )
 }
